@@ -5,6 +5,8 @@
  */
 package operadores;
 
+import java.util.Scanner;
+
 /**
  *
  * @author clases
@@ -43,6 +45,23 @@ public class Operadores {
          if(!true){ //evaluaa que no es verdadero
              System.out.println("Hola!");
          }
+         int x = 10;
+         int y = 20;
+         int z = 30;
+         if (x > y || z > y) {
+             System.out.println("Resultado " + (x+y+z) );
+             System.out.println("Resultado " + x+y+z );
+        }
+        System.out.println((int)(Math.random() *100)); 
+        // Error en la siguientne linea
+        //System.out.println((boolean)(Math.random() *100)); 
+        
+        Scanner sc = new Scanner(System.in);
+        if(sc != null){
+            System.out.println("Escribe tu edad en un numero");
+        }
+        Integer edad = sc.nextInt();
+        eresMayorDeEdadConSwitch(edad);
     }
     /**
      * Este metodo nos ayuda a conocer el valor sobrante de una divison
@@ -64,5 +83,33 @@ public class Operadores {
         } else{
             System.out.println("El numero " + numeroAEvaluar + " es impar");
         }
+    }
+   /**
+    * Metodo que indica si una persona es mayor de edad
+    * @param edad int que representa numero de anios cumplidos
+    */
+    public static void eresMayorDeEdadConSwitch(int edad){
+            switch(edad){
+                case 18:
+                    System.out.println("Apenas eres mayor de edad");
+                    break;
+                case 20:
+                    System.out.println("Eres mayor de edad");
+                    break;
+                case 80:
+                    System.out.println("Ya tas viejo");
+                default:
+                    
+                    System.out.println("No estoy seguro si eres joven o viejo");
+                        
+            }  
+//        if(edad > 18){
+//            System.out.println("Eres  mayor de edad");  
+//        } else if(edad ==18){
+//            
+//            System.out.println("Apenas eres mayor de edad");
+//        } else{
+//            System.out.println("Eres menor de edad1");
+//        }
     }
 }
